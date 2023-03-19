@@ -33,11 +33,10 @@ listing:
     type: table
     sort-ui: false
     filter-ui: false
-    fields: [dates,lab,tasks]
+    fields: [dates,lab]
     field-display-names:
         dates: Dates
         lab: Lab
-        tasks: Tasks
   - id: skills
     contents: skills.yml
     type: grid
