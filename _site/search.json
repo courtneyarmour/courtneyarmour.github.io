@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Courtney R Armour PhD",
+    "section": "",
+    "text": "Hi!\n~~ ABOUT ME ~~"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Universtiy of MichiganDepartment of Microbiology and ImmunologyMedical Science Research Building IAnn Arbor, MI 48109\n\n\n\n\n\n\n\n\narmourc[at]umich[dot]edu\n\n\n\n\n\n\n\n@CourtneyRArmour\n\n\n\n\n\n\n\ncourtneyarmour\n\n\n\n\n\n\n\nhttps://www.linkedin.com/in/courtneyarmour\n\n\n\n\n\n\n\nCourtney R Armour"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Courtney R Armour PhD",
+    "section": "",
+    "text": "Languages and Tools - Python, R, Spark, Bash, Git, Docker, SQL, Tableau, Github Actions, Quarto\nSelected Coursework - Deep Learning, Bayesian Machine Learning, Big Data Systems with Spark, Linear Models for Data Science, Statistical Learning, Data Engineering, Linear Algebra, Econometrics I & II, Data Visualization, Programming in Python\n\n\nBuilt diff-in-diff and multi-touch attribution model codebase in Python(OOP) for Ad Data Science Team and spec requesting these studies for Research Team. This code base has saved 100+ hours and brought in $100,000s in revenue.\n\n\n\nIn conjunction with other data scientists on a large project, developed and performed statistical tests on time series data in 17 surveys of 5 countries in over 200 tables\nLed project to build a Python Web Bot (Selenium) to automate generation of test cases in surveys, contributed this to data science code base (used by 60+ data scientists), saving company $10,000s in time and errors\nOver 300+ requests, pulled data from API or large database into R, wrangled data using R, and output figures and tables\n\n\n\nLed in modeling projects predicting election turnout for entire U.S. in 2022, phone response rates, etc.\nWrangled, cleaned, weighted, or made presentations for 60+ survey datasets with R, SQL, and AWS\nUsing R Shiny, built a codeless-crosstab tool for company’s research team\n\n\n\nDesigned and executed multiple survey experiments in original research projects\nMentored 60+ students in solving econometrics problems in weekly office hours\nVisualized data using R creating 50+ informative figures for the AFS official report, news outlets, and professor’s projects\n\n\n\nCoded a full data-pipeline using ONLY Apache Spark (PySpark): wrangling and joining data, EDA, feature engineering, model selection with a grid search (Lasso, Ridge, Naive Bayes, Random Forest, GBT), model evaluation, and full project write-up and analysis\n\n\n\nExtracted features such as MFCC, Chromagram, Spectral Contrast from 8000+ audio clips using Python\nEstimated models custom and popular CNN architectures (AlexNet, GoogLeNet, etc.) using Tensorflow and Keras\nFull project write-up and code on Github\n\n\n\nCompared and estimated several Bayesian Regression models with PYMC3 in Python. Ultim"
+  },
+  {
+    "objectID": "cv/index.html",
+    "href": "cv/index.html",
+    "title": "Courtney R. Armour PhD",
+    "section": "",
+    "text": "Contact:    armourc [at] umich.edu"
+  },
+  {
+    "objectID": "cv/index.html#education",
+    "href": "cv/index.html#education",
+    "title": "Courtney R. Armour PhD",
+    "section": "Education",
+    "text": "Education\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          degree\n        \n         \n          inst\n        \n         \n          dates\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\ndates\n\n\ndegree\n\n\ninst\n\n\n\n\n\n\n2014-2020\n\n\nPhD Molecular and Cellular Biology\n\n\nOregon State UniversityDeptartment of Microbiology  Advisor: Thomas Sharpton\n\n\n\n\n2008-2012\n\n\nBS Biological Sciences, minor in Mathematics\n\n\nArizona State UniveristyCollege of Liberal Arts and Sciences\n\n\n\n\n\n\nNo matching items"
+  }
+]

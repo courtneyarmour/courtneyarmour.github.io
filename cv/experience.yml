@@ -1,0 +1,22 @@
+- title: Postdoctoral Research Fellow (remote)
+  lab: "[Schloss Lab](https://www.schlosslab.org/)<br>Department of Microbiology and Immunology<br>Univeristy of Michigan"
+  dates: 2020-present
+  tasks: |
+    - task1
+    - task2
+    - task3
+- title: Graduate Research Assistant
+  lab: "[Sharpton Lab](http://lab.sharpton.org/)<br>Department of Microbiology<br>Oregon State University"
+  dates: 2014-2020
+  tasks: |
+    - metagenomics
+    - genome assembly
+    - network analysis
+- title: Research/Laboratory Assistant
+  lab: "Dr. Paul Boehmer and Dr. Jui-Cheng Hsieh<br>Department of Basic Medical Sciences<br>University of Arizona"
+  dates: 2010-2013
+  tasks: | 
+    - cell culture
+    - cloning
+    - viral mutants
+  

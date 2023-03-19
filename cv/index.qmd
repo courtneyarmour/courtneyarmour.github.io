@@ -1,0 +1,69 @@
+---
+title: "Courtney R. Armour PhD"
+descripton: | 
+    _BLAH BLAH BALH_
+toc: true
+toc-location: left
+page-layout: full
+listing:
+  - id: edu
+    contents: edu.yml
+    type: table
+    fields: [dates,degree,inst]
+    sort-ui: false
+    filter-ui: false
+    field-display-names:
+      dates: Dates
+      degree: Degree
+      inst: Institution
+  - id: papers
+    contents: papers.yml
+    type: table
+    sort-ui: false
+    fields: [year,title,authors,journal]
+    field-links: 
+      - journal
+    field-display-names: 
+      year: Year
+      title: Title
+      authors: Authors
+      journal: Journal
+  - id: experience
+    contents: experience.yml
+    type: table
+    sort-ui: false
+    filter-ui: false
+    fields: [dates,lab,tasks]
+    field-display-names:
+        dates: Dates
+        lab: Lab
+        tasks: Tasks
+  - id: skills
+    contents: skills.yml
+    type: grid
+    grid-columns: 3
+    grid-item-border: true
+    sort-ui: false
+    filter-ui: false
+---
+
+Contact:  &ensp;
+[{{< fa regular envelope >}} armourc [at] umich.edu](mailto:armourc@umich.edu)
+
+## Education
+
+:::{#edu}
+:::
+
+## Skills & Expertise
+:::{#skills}
+:::
+
+## Research Experience
+:::{#experience}
+:::
+
+## Publications
+
+:::{#papers}
+:::

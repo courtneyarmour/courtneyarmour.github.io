@@ -1,0 +1,28 @@
+---
+title: "Courtney R Armour PhD"
+about: 
+    template: jolla
+    links:
+    - icon: envelope
+      text: E-mail
+      href: mailto:armourc@umich.edu
+    - icon: github
+      text: GitHub
+      href: https://github.com/courtneyarmour
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/CourtneyRArmour
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/courtneyarmour/
+    - text: "{{< fa brands orcid >}} ORCID" # https://github.com/quarto-ext/fontawesome/issues/6
+      href: https://orcid.org/0000-0002-5250-1224
+---
+
+:::{#about}
+
+![](comp_bio_art.png)
+
+I'm a computational biologist specializing in statistical analysis of complex datasets. I am experienced with multiple programing languages as well as a variety of data exploration and visualization techniques. I'm passionate about open science and reproducable research. I'm seeking the opportunity to work on cutting edge research at the frontier of human health.
+
+:::

@@ -1,0 +1,10 @@
+{
+  "listingMap": {
+    "cv/index.qmd": [
+      "edu.yml",
+      "papers.yml",
+      "experience.yml",
+      "skills.yml"
+    ]
+  }
+}
