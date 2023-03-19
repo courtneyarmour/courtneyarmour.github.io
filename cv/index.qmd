@@ -33,9 +33,10 @@ listing:
     type: table
     sort-ui: false
     filter-ui: false
-    fields: [dates,lab]
+    fields: [dates,title,lab]
     field-display-names:
         dates: Dates
+        title: Position
         lab: Lab
   - id: skills
     contents: skills.yml
