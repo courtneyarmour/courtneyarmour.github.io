@@ -2,21 +2,21 @@
   lab: "[Schloss Lab](https://www.schlosslab.org/)<br>Department of Microbiology and Immunology<br>Univeristy of Michigan"
   dates: 2020-present
   tasks: |
-    - task1
-    - task2
-    - task3
+    - Optimizing machine learning models to predict colorectal cancer based on gut microbiome taxonomic abundace
+    - Identifying early markers of colorectal cancer development in a large clinical cohort of individuals with genetic predisposition to cancer
+    - Developing curriculum and teaching computational skills to coding beginners in virtual workshops
 - title: Graduate Research Assistant
   lab: "[Sharpton Lab](http://lab.sharpton.org/)<br>Department of Microbiology<br>Oregon State University"
   dates: 2014-2020
   tasks: |
-    - metagenomics
-    - genome assembly
-    - network analysis
+    - Metagenomic analysis of gut microbiom samples to quantify associations with health
+    - Assembly of metagenomic data from gut microbiome samples to build integrated gene catalogues of microbiome genomic diversity
+    - Collaborate with a diverse group to develop methodology for analyzing analyzing microbiome data
 - title: Research/Laboratory Assistant
   lab: "Dr. Paul Boehmer and Dr. Jui-Cheng Hsieh<br>Department of Basic Medical Sciences<br>University of Arizona"
   dates: 2010-2013
   tasks: | 
-    - cell culture
-    - cloning
-    - viral mutants
+    - Creation of HSV-1 viral mutants to quantify impact on replication
+    - Mentor new members of the lab
+    - Maintain tissue culture and order supplies
   

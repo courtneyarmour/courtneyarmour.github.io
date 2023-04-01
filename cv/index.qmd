@@ -1,10 +1,9 @@
 ---
 title: "Courtney R. Armour PhD"
-descripton: | 
-    _BLAH BLAH BALH_
 toc: true
 toc-location: left
 page-layout: full
+date-format: 'MMM YYYY'
 listing:
   - id: edu
     contents: edu.yml
@@ -33,11 +32,12 @@ listing:
     type: table
     sort-ui: false
     filter-ui: false
-    fields: [dates,title,lab]
+    fields: [dates,title,lab,tasks]
     field-display-names:
         dates: Dates
         title: Position
         lab: Lab
+        tasks: Projects
   - id: skills
     contents: skills.yml
     type: grid
@@ -45,25 +45,139 @@ listing:
     grid-item-border: true
     sort-ui: false
     filter-ui: false
+  - id: posters
+    contents: posters.yml
+    type: table
+    sort-ui: false
+    filter-ui: false
+    fields: [date,event,title,location]
+    field-display-names:
+      date: Date
+      event: Event
+      title: Title
+      location: Location
+  - id: talks
+    contents: talks.yml
+    type: table
+    sort-ui: false
+    filter-ui: false
+    fields: [date,event,title,location]
+    field-display-names:
+      date: Date
+      event: Event
+      title: Title
+      location: Location
+  - id: funding
+    contents: funding.yml
+    type: table
+    sort-ui: false
+    filter-ui: false
+    fields: [year,award,amount]
+    field-display-names:
+      year: Year
+      award: Award
+      amount: Amount
+  - id: training
+    contents: training.yml
+    type: table
+    sort-ui: false
+    filter-ui: false
+    fields: [when,what,where]
+    field-display-names: 
+      when: Year
+      what: Course
+      where: University
+  - id: teaching
+    contents: teaching.yml
+    type: table
+    sort-ui: false
+    filter-ui: false
+    fields: [when,what,where]
+    field-display-names: 
+      when: Year
+      what: Course
+      where: University
+  - id: mentorship
+    contents: mentorship.yml
+    type: table
+    sort-ui: false
+    filter-ui: false
+    fields: [when,what,where]
+    field-display-names: 
+      when: Year
+      what: Student
+      where: University
+  - id: references
+    contents: references.yml
+    type: table
+    sort-ui: false
+    filter-ui: false
+    fields: [who,position,relationship]
+    field-display-names: 
+      who: Name and Contact
+      position: Position
+      relationship: Relationship
+
 ---
 
-Contact:  &ensp;
-[{{< fa regular envelope >}} armourc [at] umich.edu](mailto:armourc@umich.edu)
+View a PDF version of my CV: &ensp;
+[{{< fa file-pdf >}}](latex_cv/armour_cv_latex.pdf)
 
-## Education
+## {{< fa cogs >}} Skills & Expertise
+
+:::{#skills}
+:::
+
+## {{< fa university >}} Education
 
 :::{#edu}
 :::
 
-## Skills & Expertise
-:::{#skills}
-:::
+## {{< fa chart-column >}} Research Experience
 
-## Research Experience
 :::{#experience}
 :::
 
-## Publications
+## {{< fa file-lines >}} Publications
 
 :::{#papers}
+:::
+
+## {{< fa comments >}} Presentations
+
+### Talks
+
+:::{#talks}
+:::
+
+### Posters
+
+:::{#posters}
+:::
+
+## {{< fa trophy >}} Fellowships
+
+:::{#funding}
+:::
+
+## {{< fa bullseye >}} Specialized Training
+
+:::{#training}
+:::
+
+## {{< fa book >}} Teaching and Mentorship
+
+### Teaching
+
+:::{#teaching}
+:::
+
+### Mentorship
+
+:::{#mentorship}
+:::
+
+## {{< fa people-group >}} References
+
+:::{#references}
 :::

@@ -1,0 +1,17 @@
+- what: > 
+    Deep Learning for Life scientists<br>
+    6-week workshop on neural networks
+  when: 2019
+  where: "Center for Genome Research and Biocomputing<br>Oregon State University"
+- what: >
+    Specialized workshop courses:<br>
+    - RNAseq I & II<br>
+    - Computing in Life Sciences (Perl)<br>
+    - Python I & II<br>
+    - Command-line Data Analysis<br>
+    - Introduction to Unix/Linux
+  when: 2014 - 2019
+  where: "Center for Genome Research and Biocomputing<br>Oregon State University"
+- what: Certificate in Applied Biostatistics
+  when: 2014
+  where: Department of Biostatistics<br>University of Washington

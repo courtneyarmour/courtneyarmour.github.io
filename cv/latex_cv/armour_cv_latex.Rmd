@@ -1,0 +1,309 @@
+---
+surname: Courtney R Armour PhD
+position: "Computational Biologist"
+profilepic: "../../images/square.png"
+pronouns: "Seattle WA"
+phone: (480)326-4319
+www: courtneyarmour.github.io
+email: "armourc@umich.edu"
+github: courtneyarmour
+linkedin: courtneyarmour
+orcid: 0000-0002-5250-1224
+#googlescholar: 3SavuUsAAAAJ&hl=en
+headcolor: 075aa3
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+    latex_engine: xelatex
+    show_footer: true
+header-includes:
+  - \usepackage{fontawesome}
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{multirow}
+  - \usepackage{wrapfig}
+  - \usepackage{float}
+  - \usepackage{colortbl}
+  - \usepackage{pdflscape}
+  - \usepackage{tabu}
+  - \usepackage{threeparttable}
+  - \usepackage{threeparttablex}
+  - \usepackage[normalem]{ulem}
+  - \usepackage{makecell}
+  - \usepackage{xcolor}
+---
+
+\definecolor{specialblue}{RGB}{7, 90, 163}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tidyverse)
+library(kableExtra)
+library(yaml)
+library(here)
+library(glue)
+
+replace_dollar <- function(x) {
+  return(str_replace_all(x,"[$]", "\\$0"))
+}
+
+# following functions from kelly sovacool https://github.com/kelly-sovacool/latex-cv/blob/main/vitae.Rmd
+read_yaml_as_tbl <- function(filepath) {
+  read_yaml(filepath) %>%
+    map_dfr(function(x) {
+      sapply(names(x), function(y) {
+        # wrap elements in list if length > 1
+        if (length(x[[y]]) > 1) {
+          x[[y]] <<- list(x[[y]])
+        }
+      })
+      return(as_tibble_row(x))
+    }) %>%
+    return()
+} 
+replace_amps <- function(x) {
+  return(str_replace_all(x, "&", "\\\\&"))
+}
+format_md2tex <- function(x) {
+  return(x %>% 
+           str_replace_all("_(.*)_", "\\\\textit{\\1}") %>%  # italics
+           str_replace_all("\\*\\*(.*)\\*\\*", "\\\\textbf{\\1}") %>% # TODO bold
+           str_replace_all('\\+', '\\\\plus') %>% 
+           replace_amps()
+         )
+}
+split_md_list <- function(x) {
+  return(x %>% 
+           str_remove('^- ') %>% 
+           str_remove("\n$") %>% 
+           str_split('\n- ')
+         )
+}
+```
+
+Summary 
+============================================
+
+I'm a computational biologist specializing in statistical analysis of complex datasets. I am experienced with multiple programming languages as well as a variety of data exploration and visualization techniques. I'm passionate about open science and reproducible research. I'm seeking the opportunity to work on cutting edge research at the frontier of human health.
+
+\faCogs Skills and Expertise
+============================================
+
+```{r skilltable, results='markup'}
+tribble(
+   ~`Research`, ~Computational, ~Laboratory,
+   linebreak("Machine learning -- Data visualization\nGut microbiome -- Metagenomics\nAmplicon sequencing -- Statistical analysis -- Network analysis\nReproducible research"),
+  linebreak("R -- R Markdown -- Quarto\nGit/GitHub -- Snakemake\nConda/mamba -- Bash\nSlurm -- Perl -- Python"),
+  "DNA extraction -- Library Preparation -- Cell Culture -- Cloning -- Gel electrophoresis -- Western blot -- PCR"
+) |>
+  kable(booktabs = T, align = 'c', escape = F, format = "latex") |>
+  kableExtra::kable_styling(full_width = F, font_size = 9, latex_options = "HOLD_position") |> 
+  row_spec(0, bold = T, color = "#075aa3") |>
+  row_spec(1, bold = F, color = "#7f7f7f") |>
+  column_spec(column = 1:3, width = '4.85cm',latex_valign = "m") 
+```
+
+\faUniversity Education 
+============================================
+
+```{r edu}
+read_yaml_as_tbl(here('cv', 'edu.yml')) %>% 
+  separate(inst, c('inst', 'dept','detail'), sep = "<br>") %>% 
+  mutate(degree = case_when(degree == "**PhD** Molecular and Cellular Biology" ~ "PhD Molecular and Cellular Biology",
+                            degree == "**BS** Biological Sciences" ~ "BS Biological Sciences",
+                            TRUE ~ degree)) %>% 
+  detailed_entries(what = dept, 
+                   when = dates, 
+                   with = degree, 
+                   where = inst, 
+                   why = detail)
+```
+
+\faBarChart Experience 
+============================================
+
+```{r exp}
+read_yaml_as_tbl(here('cv', 'experience.yml')) %>% 
+  separate(lab, c('lab', 'dept','inst'), sep = "<br>") %>% 
+  mutate(lab = gsub("\\[(.*)\\]\\(.*\\)","\\1",lab)) %>% 
+  #mutate(lab = gsub("\\[(.*)\\]\\((.*)\\)",paste0("\\href{","\\2","}{","\\1","}"),lab)) %>% 
+  #\\href{https://doi.org/10.1101/2022.09.01.506299}{10.1101/2022.09.01.506299}
+  mutate(why = tasks %>% format_md2tex() %>% split_md_list()) %>% 
+  detailed_entries(
+    what = lab,
+    when = dates,
+    with = title,
+    where = inst,
+    why = why, 
+    .protect = FALSE
+  )
+
+```
+
+\faFileText Publications 
+============================================
+
+\small <sup>\*</sup> Indicates co-first author
+
+```{r pubs, results='asis'}
+bib_entries <- read_yaml_as_tbl(here('cv','papers.yml'))
+
+raise_asterisk <- function(x) {
+  return(str_replace_all(x, "\\*", "\\textsuperscript{*}"))
+}
+
+pubs <- bib_entries %>% 
+  mutate(authors = format_md2tex(authors),
+         #replace * for italics with _ and format to tex
+         journal = format_md2tex(gsub("\\*","_",journal)), 
+         doi = paste0("\\href{https://doi.org/",doi,"}{",doi,"}")) %>% 
+  mutate(tex = paste0(authors," (",as.character(year),"). ",title," ",journal,". doi: ",doi)) %>% 
+  pull(tex) %>% 
+  sapply(., function(x) {glue::glue("\\item { x %>% replace_amps() %>% raise_asterisk() }")})
+
+cat('\\small', '\\begin{enumerate}', pubs, '\\end{enumerate}', sep = "\n")
+```
+
+\faComments Presentations 
+============================================
+
+\large \textbf{\textcolor{specialblue}{Talks}}
+
+```{r talks}
+
+read_yaml_as_tbl(here('cv','talks.yml')) %>% 
+  mutate(title = gsub("<br>",". ",title)) %>% 
+  mutate(title = gsub("\\*","_",title)) %>% 
+  mutate(title = format_md2tex(title)) %>% 
+  detailed_entries(
+    what = event,
+    when = date,
+    with = title,
+    where = location,
+    .protect = FALSE
+  )
+
+```
+
+\large \textbf{\textcolor{specialblue}{Posters}}  
+
+```{r posters}
+
+read_yaml_as_tbl(here('cv','posters.yml')) %>% 
+  mutate(title = gsub("<br>",". ",title)) %>% 
+  mutate(title = gsub("\\(.*\\)","",title)) %>%
+  mutate(title = gsub("\\[|\\]","",title)) %>%
+  mutate(title = gsub("\\*","_",title)) %>% 
+  mutate(title = format_md2tex(title)) %>% 
+  detailed_entries(
+    what = event,
+    when = date,
+    with = title,
+    where = location,
+    .protect = FALSE
+  )
+
+```
+
+\faTrophy Fellowships
+============================================
+
+```{r fellowships}
+read_yaml_as_tbl(here('cv','funding.yml')) %>% 
+  mutate(amount = replace_dollar(amount)) %>% 
+  detailed_entries(
+    with = award,
+    when = year,
+    what = amount,
+    where = place,
+    .protect = FALSE
+  )
+
+
+```
+
+\faBullseye Specialized Training
+============================================
+
+```{r training}
+
+tribble(
+  ~ year, ~ course, ~ dept, ~ university, ~ detail,
+  "2019","Deep Learning for Life Scientists","Center for Genome Research and Biocomputing","Oregon State University",NA,
+  "2014 - 2019","Specialized workshop courses","Center for Genome Research and Biocomputing","Oregon State University","RNAseq I and II",
+  "2014 - 2019","Specialized workshop courses","Center for Genome Research and Biocomputing","Oregon State University","Computing in Life Sciences - Perl",
+  "2014 - 2019","Specialized workshop courses","Center for Genome Research and Biocomputing","Oregon State University","Python I and II",
+  "2014 - 2019","Specialized workshop courses","Center for Genome Research and Biocomputing","Oregon State University","Command-line Data Analysis",
+  "2014 - 2019","Specialized workshop courses","Center for Genome Research and Biocomputing","Oregon State University","Introduction to Unix and Linux",
+  "2014","Certificate in Applied Biostatistics","Department of Biostatistics","University of Washington",NA
+) %>% 
+  detailed_entries(
+    what = dept,
+    when = year,
+    where = university,
+    with = course,
+    why = detail,
+    .protect = FALSE
+  )
+
+```
+
+\faBook Teaching and Mentorship
+============================================
+
+\large \textbf{\textcolor{specialblue}{Teaching}}  
+
+```{r teaching}
+read_yaml_as_tbl(here('cv','teaching.yml')) %>%
+  rename(course = what) %>%
+  separate(where, c('university', 'dept'), sep = "<br>") %>%
+  mutate(course=format_md2tex(gsub("\\*","_",course))) %>%
+  mutate(course=gsub("<br>"," ",course)) %>%
+  detailed_entries(
+    with = course,
+    where = dept,
+    when = when,
+    what = university,
+    .protect = FALSE)
+```
+
+\large \textbf{\textcolor{specialblue}{Mentorship}}  
+
+```{r mentorship}
+
+read_yaml_as_tbl(here('cv','mentorship.yml')) %>%
+  separate(what,c("person","position"),sep="<br>") %>%
+  separate(where,c("dept","university"),sep="<br>") %>%
+  mutate(position = paste0("\\textit{",position,"}")) %>%
+  mutate(person = paste0(person," (",position,")")) %>%
+  detailed_entries(
+    with = person,
+    what = dept,
+    where = university,
+    when = when,
+    .protect = F)
+
+```
+
+\faGroup References
+============================================
+
+```{r referencesdfadsfas}
+
+read_yaml_as_tbl(here("cv","references.yml")) %>%
+  separate(who,c("person","email"),sep="<br>") %>%
+  mutate(email = gsub("\\[.*mailto:(.*)\\)","\\1",email)) %>%
+  separate(position,c("position","university"),sep="<br>") %>%
+  mutate(person = paste0(person," - \\textit{",relationship,"}")) %>%
+  detailed_entries(
+    with = person,
+    what = email,
+    where = university,
+    when = position,
+    .protect = FALSE
+  )
+
+```

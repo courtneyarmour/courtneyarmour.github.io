@@ -131,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-dates','listing-title','listing-lab',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-dates','listing-title','listing-lab','listing-tasks',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
       
       searchColumns: ["listing-title","listing-lab","listing-dates","listing-tasks"],
     };
@@ -166,6 +166,202 @@ ul.task-list li input[type="checkbox"] {
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-skills'] = new List('listing-skills', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-posters .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-event','listing-title','listing-location',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-date","listing-event","listing-location"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-posters'] = new List('listing-posters', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-talks .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-event','listing-title','listing-location',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-date","listing-event","listing-location"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-talks'] = new List('listing-talks', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-funding .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-year','listing-award','listing-amount',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-award","listing-year","listing-amount","listing-place"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-funding'] = new List('listing-funding', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-training .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-when','listing-what','listing-where',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-what","listing-when","listing-where"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-training'] = new List('listing-training', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-teaching .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-when','listing-what','listing-where',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-what","listing-when","listing-where"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-teaching'] = new List('listing-teaching', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-mentorship .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-when','listing-what','listing-where',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-what","listing-when","listing-where"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-mentorship'] = new List('listing-mentorship', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-references .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-who','listing-position','listing-relationship',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-who","listing-position","listing-relationship"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-references'] = new List('listing-references', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -229,10 +425,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#education" id="toc-education" class="nav-link active" data-scroll-target="#education">Education</a></li>
-  <li><a href="#skills-expertise" id="toc-skills-expertise" class="nav-link" data-scroll-target="#skills-expertise">Skills &amp; Expertise</a></li>
-  <li><a href="#research-experience" id="toc-research-experience" class="nav-link" data-scroll-target="#research-experience">Research Experience</a></li>
-  <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
+  <li><a href="#fa-cogs-skills-expertise" id="toc-fa-cogs-skills-expertise" class="nav-link active" data-scroll-target="#fa-cogs-skills-expertise"><i class="fa-solid fa-cogs" aria-label="cogs"></i> Skills &amp; Expertise</a></li>
+  <li><a href="#fa-university-education" id="toc-fa-university-education" class="nav-link" data-scroll-target="#fa-university-education"><i class="fa-solid fa-university" aria-label="university"></i> Education</a></li>
+  <li><a href="#fa-chart-column-research-experience" id="toc-fa-chart-column-research-experience" class="nav-link" data-scroll-target="#fa-chart-column-research-experience"><i class="fa-solid fa-chart-column" aria-label="chart-column"></i> Research Experience</a></li>
+  <li><a href="#fa-file-lines-publications" id="toc-fa-file-lines-publications" class="nav-link" data-scroll-target="#fa-file-lines-publications"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Publications</a></li>
+  <li><a href="#fa-comments-presentations" id="toc-fa-comments-presentations" class="nav-link" data-scroll-target="#fa-comments-presentations"><i class="fa-solid fa-comments" aria-label="comments"></i> Presentations</a>
+  <ul class="collapse">
+  <li><a href="#talks" id="toc-talks" class="nav-link" data-scroll-target="#talks">Talks</a></li>
+  <li><a href="#posters" id="toc-posters" class="nav-link" data-scroll-target="#posters">Posters</a></li>
+  </ul></li>
+  <li><a href="#fa-trophy-fellowships" id="toc-fa-trophy-fellowships" class="nav-link" data-scroll-target="#fa-trophy-fellowships"><i class="fa-solid fa-trophy" aria-label="trophy"></i> Fellowships</a></li>
+  <li><a href="#fa-bullseye-specialized-training" id="toc-fa-bullseye-specialized-training" class="nav-link" data-scroll-target="#fa-bullseye-specialized-training"><i class="fa-solid fa-bullseye" aria-label="bullseye"></i> Specialized Training</a></li>
+  <li><a href="#fa-book-teaching-and-mentorship" id="toc-fa-book-teaching-and-mentorship" class="nav-link" data-scroll-target="#fa-book-teaching-and-mentorship"><i class="fa-solid fa-book" aria-label="book"></i> Teaching and Mentorship</a>
+  <ul class="collapse">
+  <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">Teaching</a></li>
+  <li><a href="#mentorship" id="toc-mentorship" class="nav-link" data-scroll-target="#mentorship">Mentorship</a></li>
+  </ul></li>
+  <li><a href="#fa-people-group-references" id="toc-fa-people-group-references" class="nav-link" data-scroll-target="#fa-people-group-references"><i class="fa-solid fa-people-group" aria-label="people-group"></i> References</a></li>
   </ul>
 </nav>
 </nav>
@@ -259,58 +468,9 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Contact:   <a href="mailto:armourc@umich.edu"><i class="fa-regular fa-envelope" aria-label="envelope"></i> armourc [at] umich.edu</a></p>
-<section id="education" class="level2">
-<h2 class="anchored" data-anchor-id="education">Education</h2>
-<div id="listing-edu" class="quarto-listing quarto-listing-container-table">
-
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Dates
-</th>
-<th>
-Degree
-</th>
-<th>
-Institution
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0">
-<td class="listing-dates">
-2014-2020
-</td>
-<td class="listing-degree">
-<strong>PhD</strong> Molecular and Cellular Biology
-</td>
-<td class="listing-inst">
-Oregon State University<br>Deptartment of Microbiology <br> Advisor: Thomas Sharpton
-</td>
-</tr>
-<tr data-index="1">
-<td class="listing-dates">
-2008-2012
-</td>
-<td class="listing-degree">
-<strong>BS</strong> Biological Sciences minor in Mathematics
-</td>
-<td class="listing-inst">
-Arizona State Univeristy<br>College of Liberal Arts and Sciences
-</td>
-</tr>
-</tbody>
-
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="skills-expertise" class="level2">
-<h2 class="anchored" data-anchor-id="skills-expertise">Skills &amp; Expertise</h2>
+<p>View a PDF version of my CV:   <a href="latex_cv/armour_cv_latex.pdf"><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i></a></p>
+<section id="fa-cogs-skills-expertise" class="level2">
+<h2 class="anchored" data-anchor-id="fa-cogs-skills-expertise"><i class="fa-solid fa-cogs" aria-label="cogs"></i> Skills &amp; Expertise</h2>
 <div id="listing-skills" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
 <div class="g-col-1" data-index="0" data-categories="R,R Markdown,Quarto,git,GitHub,Snakemake,conda/mamba,Bash,SLURM,Perl,Python,LaTeX">
@@ -362,7 +522,7 @@ LaTeX
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="machine learning,data visualization,gut microbiome,metagenomics,amplicon sequencing,statistical analysis,network analysis,reproducible research">
+<div class="g-col-1" data-index="1" data-categories="machine learning,data visualization,gut microbiome,metagenomics,amplicon sequencing,biostatistics,network analysis,reproducible research">
 <a href="" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -385,8 +545,8 @@ metagenomics
 <div class="listing-category" onclick="window.quartoListingCategory('amplicon sequencing'); return false;">
 amplicon sequencing
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('statistical analysis'); return false;">
-statistical analysis
+<div class="listing-category" onclick="window.quartoListingCategory('biostatistics'); return false;">
+biostatistics
 </div>
 <div class="listing-category" onclick="window.quartoListingCategory('network analysis'); return false;">
 network analysis
@@ -439,8 +599,57 @@ No matching items
 </div>
 </div>
 </section>
-<section id="research-experience" class="level2">
-<h2 class="anchored" data-anchor-id="research-experience">Research Experience</h2>
+<section id="fa-university-education" class="level2">
+<h2 class="anchored" data-anchor-id="fa-university-education"><i class="fa-solid fa-university" aria-label="university"></i> Education</h2>
+<div id="listing-edu" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Dates
+</th>
+<th>
+Degree
+</th>
+<th>
+Institution
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0">
+<td class="listing-dates">
+2014-2020
+</td>
+<td class="listing-degree">
+<strong>PhD</strong> Molecular and Cellular Biology
+</td>
+<td class="listing-inst">
+Oregon State University<br>Deptartment of Microbiology<br>Advisor: Thomas Sharpton
+</td>
+</tr>
+<tr data-index="1">
+<td class="listing-dates">
+2008-2012
+</td>
+<td class="listing-degree">
+<strong>BS</strong> Biological Sciences
+</td>
+<td class="listing-inst">
+Arizona State Univeristy<br>College of Liberal Arts and Sciences<br>Minor: Mathematics
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="fa-chart-column-research-experience" class="level2">
+<h2 class="anchored" data-anchor-id="fa-chart-column-research-experience"><i class="fa-solid fa-chart-column" aria-label="chart-column"></i> Research Experience</h2>
 <div id="listing-experience" class="quarto-listing quarto-listing-container-table">
 
 <table class="quarto-listing-table table">
@@ -455,6 +664,9 @@ Position
 <th>
 Lab
 </th>
+<th>
+Projects
+</th>
 </tr>
 </thead>
 <tbody class="list">
@@ -468,6 +680,13 @@ Postdoctoral Research Fellow (remote)
 <td class="listing-lab">
 <a href="https://www.schlosslab.org/">Schloss Lab</a><br>Department of Microbiology and Immunology<br>Univeristy of Michigan
 </td>
+<td class="listing-tasks">
+<ul>
+<li>Optimizing machine learning models to predict colorectal cancer based on gut microbiome taxonomic abundace</li>
+<li>Identifying early markers of colorectal cancer development in a large clinical cohort of individuals with genetic predisposition to cancer</li>
+<li>Developing curriculum and teaching computational skills to coding beginners in virtual workshops</li>
+</ul>
+</td>
 </tr>
 <tr data-index="1" data-listing-title-sort="Graduate Research Assistant">
 <td class="listing-dates">
@@ -478,6 +697,13 @@ Graduate Research Assistant
 </td>
 <td class="listing-lab">
 <a href="http://lab.sharpton.org/">Sharpton Lab</a><br>Department of Microbiology<br>Oregon State University
+</td>
+<td class="listing-tasks">
+<ul>
+<li>Metagenomic analysis of gut microbiom samples to quantify associations with health</li>
+<li>Assembly of metagenomic data from gut microbiome samples to build integrated gene catalogues of microbiome genomic diversity</li>
+<li>Collaborate with a diverse group to develop methodology for analyzing analyzing microbiome data</li>
+</ul>
 </td>
 </tr>
 <tr data-index="2" data-listing-title-sort="Research/Laboratory Assistant">
@@ -490,6 +716,13 @@ Research/Laboratory Assistant
 <td class="listing-lab">
 Dr.&nbsp;Paul Boehmer and Dr.&nbsp;Jui-Cheng Hsieh<br>Department of Basic Medical Sciences<br>University of Arizona
 </td>
+<td class="listing-tasks">
+<ul>
+<li>Creation of HSV-1 viral mutants to quantify impact on replication</li>
+<li>Mentor new members of the lab</li>
+<li>Maintain tissue culture and order supplies</li>
+</ul>
+</td>
 </tr>
 </tbody>
 
@@ -499,8 +732,8 @@ No matching items
 </div>
 </div>
 </section>
-<section id="publications" class="level2">
-<h2 class="anchored" data-anchor-id="publications">Publications</h2>
+<section id="fa-file-lines-publications" class="level2">
+<h2 class="anchored" data-anchor-id="fa-file-lines-publications"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Publications</h2>
 <div id="listing-papers" class="quarto-listing quarto-listing-container-table">
 <div class="listing-actions-group">
     <div class="input-group input-group-sm quarto-listing-filter">
@@ -665,6 +898,579 @@ Jui-Cheng Hsieh, Ryan Kuta, <strong>Courtney R. Armour</strong>, Paul E. Boehmer
 </td>
 <td class="listing-journal">
 <a href="https://www-sciencedirect-com.proxy.lib.umich.edu/science/article/pii/S0042682214001421" class="journal">Virology</a>
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="fa-comments-presentations" class="level2">
+<h2 class="anchored" data-anchor-id="fa-comments-presentations"><i class="fa-solid fa-comments" aria-label="comments"></i> Presentations</h2>
+<section id="talks" class="level3">
+<h3 class="anchored" data-anchor-id="talks">Talks</h3>
+<div id="listing-talks" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Date
+</th>
+<th>
+Event
+</th>
+<th>
+Title
+</th>
+<th>
+Location
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-date-sort="1583038800000" data-listing-title-sort="Comparative metagenomic investigations link the functional capacity of the gut microbiome to vertebrate physiology">
+<td class="listing-date">
+Mar 2020
+</td>
+<td class="listing-event">
+Dissertation Defense
+</td>
+<td class="listing-title">
+Comparative metagenomic investigations link the functional capacity of the gut microbiome to vertebrate physiology
+</td>
+<td class="listing-location">
+Oregon State University
+</td>
+</tr>
+<tr data-index="1" data-listing-date-sort="1580533200000" data-listing-title-sort="The functional diversity of the gut microbiome in association with host physiology">
+<td class="listing-date">
+Feb 2020
+</td>
+<td class="listing-event">
+Microbiology and Immunology Seminar
+</td>
+<td class="listing-title">
+The functional diversity of the gut microbiome in association with host physiology
+</td>
+<td class="listing-location">
+University of Michigan
+</td>
+</tr>
+<tr data-index="2" data-listing-date-sort="1554091200000" data-listing-title-sort="The power of poop: diagnostic potential of the gut microbiome in human disease">
+<td class="listing-date">
+Apr 2019
+</td>
+<td class="listing-event">
+Center for Genome Research and Biocomputing Spring Conference
+</td>
+<td class="listing-title">
+The power of poop: diagnostic potential of the gut microbiome in human disease
+</td>
+<td class="listing-location">
+Oregon State University
+</td>
+</tr>
+<tr data-index="3" data-listing-date-sort="1541044800000" data-listing-title-sort="A metagenomic meta-analysis reveals functional signatures of health and disease in the human gut microbiome">
+<td class="listing-date">
+Nov 2018
+</td>
+<td class="listing-event">
+Microbiology Seminar Series
+</td>
+<td class="listing-title">
+A metagenomic meta-analysis reveals functional signatures of health and disease in the human gut microbiome
+</td>
+<td class="listing-location">
+Oregon State University
+</td>
+</tr>
+<tr data-index="4" data-listing-date-sort="1530417600000" data-listing-title-sort="A metagenomic meta-analysis reveals functional signatures of health and disease in the human gut microbiome">
+<td class="listing-date">
+Jul 2018
+</td>
+<td class="listing-event">
+International Symbiosis Society.
+</td>
+<td class="listing-title">
+A metagenomic meta-analysis reveals functional signatures of health and disease in the human gut microbiome
+</td>
+<td class="listing-location">
+Oregon State University
+</td>
+</tr>
+<tr data-index="5" data-listing-date-sort="1370059200000" data-listing-title-sort="Interaction between herpes simplex virus-1 DNA polymerase and uracil-DNA glycosylase<br>*awarded best undergraduate presentation*">
+<td class="listing-date">
+Jun 2013
+</td>
+<td class="listing-event">
+Basic Medical Sciences Research Retreat
+</td>
+<td class="listing-title">
+Interaction between herpes simplex virus-1 DNA polymerase and uracil-DNA glycosylase<br><em>awarded best undergraduate presentation</em>
+</td>
+<td class="listing-location">
+University of Arizona
+</td>
+</tr>
+<tr data-index="6" data-listing-date-sort="1362114000000" data-listing-title-sort="Interaction between herpes simplex virus-1 DNA polymerase and uracil- DNA glycosylase">
+<td class="listing-date">
+Mar 2013
+</td>
+<td class="listing-event">
+Basic Medical Sciences Intra-Departmental Seminar Series
+</td>
+<td class="listing-title">
+Interaction between herpes simplex virus-1 DNA polymerase and uracil- DNA glycosylase
+</td>
+<td class="listing-location">
+University of Arizona
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="posters" class="level3">
+<h3 class="anchored" data-anchor-id="posters">Posters</h3>
+<div id="listing-posters" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Date
+</th>
+<th>
+Event
+</th>
+<th>
+Title
+</th>
+<th>
+Location
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-date-sort="1559361600000" data-listing-title-sort="Modeling the functional variation of the gut microbiome across vertebrates">
+<td class="listing-date">
+Jun 2019
+</td>
+<td class="listing-event">
+ASM Microbe
+</td>
+<td class="listing-title">
+Modeling the functional variation of the gut microbiome across vertebrates
+</td>
+<td class="listing-location">
+San Francisco CA
+</td>
+</tr>
+<tr data-index="1" data-listing-date-sort="1535774400000" data-listing-title-sort="A metagenomic meta-analysis reveals functional signatures of health and disease in the human gut microbiome">
+<td class="listing-date">
+Sep 2018
+</td>
+<td class="listing-event">
+Lake Arrowhead Microbial Genomics Conference
+</td>
+<td class="listing-title">
+A metagenomic meta-analysis reveals functional signatures of health and disease in the human gut microbiome
+</td>
+<td class="listing-location">
+Lake Arrowhead CA
+</td>
+</tr>
+<tr data-index="2" data-listing-date-sort="1538366400000" data-listing-title-sort="A Metagenomic Meta-Analysis Reveals Functional Signatures of Health and Disease in the Human Gut Microbiome<br>[*awarded best graduate student poster*](https://cqls.oregonstate.edu/fall-conference/previous-fall-conferences/2018-fall-conference)">
+<td class="listing-date">
+Oct 2018
+</td>
+<td class="listing-event">
+Fall Center for Genome Research and Biocomputing Conferences
+</td>
+<td class="listing-title">
+A Metagenomic Meta-Analysis Reveals Functional Signatures of Health and Disease in the Human Gut Microbiome<br><a href="https://cqls.oregonstate.edu/fall-conference/previous-fall-conferences/2018-fall-conference"><em>awarded best graduate student poster</em></a>
+</td>
+<td class="listing-location">
+Oregon State University
+</td>
+</tr>
+<tr data-index="3" data-listing-date-sort="1501560000000" data-listing-title-sort="Large-scale analysis of human gut metagenomes reveals functional indicators of disease in the gut microbiome">
+<td class="listing-date">
+Aug 2017
+</td>
+<td class="listing-event">
+EMSL/PNNL Multi-Omics for Microbiomes Conference
+</td>
+<td class="listing-title">
+Large-scale analysis of human gut metagenomes reveals functional indicators of disease in the gut microbiome
+</td>
+<td class="listing-location">
+Pasco WA
+</td>
+</tr>
+<tr data-index="4" data-listing-date-sort="1493611200000" data-listing-title-sort="Integrating clinical data reveals functional indicators of disease in the gut microbiome">
+<td class="listing-date">
+May 2017
+</td>
+<td class="listing-event">
+OSU Microbiome Initiative Forum
+</td>
+<td class="listing-title">
+Integrating clinical data reveals functional indicators of disease in the gut microbiome
+</td>
+<td class="listing-location">
+Oregon State University
+</td>
+</tr>
+<tr data-index="5" data-listing-date-sort="1470024000000" data-listing-title-sort="Integrating clinical metagenomic data reveals microbiome signatures of dysbiosis">
+<td class="listing-date">
+Aug 2016
+</td>
+<td class="listing-event">
+META Center Symposium
+</td>
+<td class="listing-title">
+Integrating clinical metagenomic data reveals microbiome signatures of dysbiosis
+</td>
+<td class="listing-location">
+University of Oregon
+</td>
+</tr>
+<tr data-index="6" data-listing-date-sort="1438401600000" data-listing-title-sort="An automated workflow for the quality control and functional analysis of host-associated metagenomes">
+<td class="listing-date">
+Aug 2015
+</td>
+<td class="listing-event">
+META Center Symposium
+</td>
+<td class="listing-title">
+An automated workflow for the quality control and functional analysis of host-associated metagenomes
+</td>
+<td class="listing-location">
+University of Oregon
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+</section>
+<section id="fa-trophy-fellowships" class="level2">
+<h2 class="anchored" data-anchor-id="fa-trophy-fellowships"><i class="fa-solid fa-trophy" aria-label="trophy"></i> Fellowships</h2>
+<div id="listing-funding" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Year
+</th>
+<th>
+Award
+</th>
+<th>
+Amount
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0">
+<td class="listing-year">
+2018 - 2019
+</td>
+<td class="listing-award">
+Larry W. Martin and Joyce B. O’Neill Fellowship
+</td>
+<td class="listing-amount">
+$25,000
+</td>
+</tr>
+<tr data-index="1">
+<td class="listing-year">
+Winter 2018
+</td>
+<td class="listing-award">
+Nicholas R. Tartar Graduate Student Fellowship
+</td>
+<td class="listing-amount">
+$6,671
+</td>
+</tr>
+<tr data-index="2">
+<td class="listing-year">
+AUG 2017
+</td>
+<td class="listing-award">
+Pacific Northwest National Lab Travel Grant
+</td>
+<td class="listing-amount">
+Cost of conference registration
+</td>
+</tr>
+<tr data-index="3">
+<td class="listing-year">
+2016 - 2020
+</td>
+<td class="listing-award">
+ASM SIGHPC and Intel Data and Computational Science Fellowship
+</td>
+<td class="listing-amount">
+$15,000 per year - $60,000 total
+</td>
+</tr>
+<tr data-index="4">
+<td class="listing-year">
+2008 - 2012
+</td>
+<td class="listing-award">
+President’s Scholarship
+</td>
+<td class="listing-amount">
+$9,000 per year - $36,000 total
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="fa-bullseye-specialized-training" class="level2">
+<h2 class="anchored" data-anchor-id="fa-bullseye-specialized-training"><i class="fa-solid fa-bullseye" aria-label="bullseye"></i> Specialized Training</h2>
+<div id="listing-training" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Year
+</th>
+<th>
+Course
+</th>
+<th>
+University
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0">
+<td class="listing-when">
+2019
+</td>
+<td class="listing-what">
+Deep Learning for Life scientists<br> 6-week workshop on neural networks
+</td>
+<td class="listing-where">
+Center for Genome Research and Biocomputing<br>Oregon State University
+</td>
+</tr>
+<tr data-index="1">
+<td class="listing-when">
+2014 - 2019
+</td>
+<td class="listing-what">
+Specialized workshop courses:<br> - RNAseq I &amp; II<br> - Computing in Life Sciences (Perl)<br> - Python I &amp; II<br> - Command-line Data Analysis<br> - Introduction to Unix/Linux
+</td>
+<td class="listing-where">
+Center for Genome Research and Biocomputing<br>Oregon State University
+</td>
+</tr>
+<tr data-index="2">
+<td class="listing-when">
+2014
+</td>
+<td class="listing-what">
+Certificate in Applied Biostatistics
+</td>
+<td class="listing-where">
+Department of Biostatistics<br>University of Washington
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="fa-book-teaching-and-mentorship" class="level2">
+<h2 class="anchored" data-anchor-id="fa-book-teaching-and-mentorship"><i class="fa-solid fa-book" aria-label="book"></i> Teaching and Mentorship</h2>
+<section id="teaching" class="level3">
+<h3 class="anchored" data-anchor-id="teaching">Teaching</h3>
+<div id="listing-teaching" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Year
+</th>
+<th>
+Course
+</th>
+<th>
+University
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0">
+<td class="listing-when">
+Fall 2016
+</td>
+<td class="listing-what">
+Teaching Assistant (ST599)<br><em>Introduction to Quantitative Genomics</em>
+</td>
+<td class="listing-where">
+Department of Statistics<br>Oregon State University
+</td>
+</tr>
+<tr data-index="1">
+<td class="listing-when">
+Fall 2016
+</td>
+<td class="listing-what">
+Teaching Assistant (BI211)<br><em>Principles of Biology for Life Science Majors</em>
+</td>
+<td class="listing-where">
+Department of Statistics<br>Oregon State University
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="mentorship" class="level3">
+<h3 class="anchored" data-anchor-id="mentorship">Mentorship</h3>
+<div id="listing-mentorship" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Year
+</th>
+<th>
+Student
+</th>
+<th>
+University
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0">
+<td class="listing-when">
+2019 - 2020
+</td>
+<td class="listing-what">
+Austin Hammer<br>PhD Student
+</td>
+<td class="listing-where">
+Department of Microbiology<br>Oregon State University
+</td>
+</tr>
+<tr data-index="1">
+<td class="listing-when">
+2017 - 2019
+</td>
+<td class="listing-what">
+Ian Humphreys<br>Accelerated Masters Student
+</td>
+<td class="listing-where">
+Department of Microbiology<br>Oregon State University
+</td>
+</tr>
+<tr data-index="2">
+<td class="listing-when">
+2012 - 2013
+</td>
+<td class="listing-what">
+Ryan Kuta<br>Undergraduate Student
+</td>
+<td class="listing-where">
+Department of Basic Medical Sciences<br>University of Arizona
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+</section>
+<section id="fa-people-group-references" class="level2">
+<h2 class="anchored" data-anchor-id="fa-people-group-references"><i class="fa-solid fa-people-group" aria-label="people-group"></i> References</h2>
+<div id="listing-references" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Name and Contact
+</th>
+<th>
+Position
+</th>
+<th>
+Relationship
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0">
+<td class="listing-who">
+Patrick Schloss<br><a href="mailto:pschloss@umich.edu"><i class="fa-regular fa-envelope" aria-label="envelope"></i> pschloss [at] umich.edu</a>
+</td>
+<td class="listing-position">
+Professor<br>University of Michigan
+</td>
+<td class="listing-relationship">
+Postdoctoral Advisor
+</td>
+</tr>
+<tr data-index="1">
+<td class="listing-who">
+Thomas Sharpton<br><a href="mailto:thomas.sharpton@oregonstate.edu"><i class="fa-regular fa-envelope" aria-label="envelope"></i> thomas.shartpton [at] oregonstate.edu</a>
+</td>
+<td class="listing-position">
+Associate Professor<br>Oregon State University
+</td>
+<td class="listing-relationship">
+Graduate Advisor
+</td>
+</tr>
+<tr data-index="2">
+<td class="listing-who">
+Katie Pollard<br><a href="mailto:katherine.pollard@gladstone.ucsf.edu"><i class="fa-regular fa-envelope" aria-label="envelope"></i> katherine.pollard [at] gladstone.ucsf.edu</a>
+</td>
+<td class="listing-position">
+Professor<br>University of California San Francisco
+</td>
+<td class="listing-relationship">
+Collaborator and Mentor
 </td>
 </tr>
 </tbody>

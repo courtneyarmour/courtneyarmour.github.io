@@ -1,0 +1,9 @@
+- who: "Patrick Schloss<br>[{{< fa regular envelope >}} pschloss [at] umich.edu](mailto:pschloss@umich.edu)"
+  position: "Professor<br>University of Michigan"
+  relationship: Postdoctoral Advisor
+- who: "Thomas Sharpton<br>[{{< fa regular envelope >}} thomas.shartpton [at] oregonstate.edu](mailto:thomas.sharpton@oregonstate.edu)"
+  position: "Associate Professor<br>Oregon State University"  
+  relationship: Graduate Advisor
+- who: "Katie Pollard<br>[{{< fa regular envelope >}} katherine.pollard [at] gladstone.ucsf.edu](mailto:katherine.pollard@gladstone.ucsf.edu)"
+  position: "Professor<br>University of California San Francisco"
+  relationship: Collaborator and Mentor

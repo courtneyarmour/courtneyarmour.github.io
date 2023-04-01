@@ -1,0 +1,312 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+
+% Configure page margins with geometry
+\usepackage{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{075aa3}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\photo{../../images/square.png}
+\name{}{Courtney R Armour PhD}
+
+\position{Computational Biologist}
+
+\pronouns{Seattle WA}
+\mobile{(480)326-4319}
+\email{\href{mailto:armourc@umich.edu}{\nolinkurl{armourc@umich.edu}}}
+\homepage{courtneyarmour.github.io}
+\orcid{0000-0002-5250-1224}
+\github{courtneyarmour}
+\linkedin{courtneyarmour}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+\usepackage{fontawesome}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{2em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\honortitlestyle{#1}}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\honordatestyle{#1}}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {March 2023}
+    { Courtney R Armour PhD~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\definecolor{specialblue}{RGB}{7, 90, 163}
+
+\hypertarget{summary}{%
+\section{Summary}\label{summary}}
+
+I'm a computational biologist specializing in statistical analysis of
+complex datasets. I am experienced with multiple programming languages
+as well as a variety of data exploration and visualization techniques.
+I'm passionate about open science and reproducible research. I'm seeking
+the opportunity to work on cutting edge research at the frontier of
+human health.
+
+\hypertarget{skills-and-expertise}{%
+\section{\texorpdfstring{\faCogs Skills and
+Expertise}{Skills and Expertise}}\label{skills-and-expertise}}
+
+\begin{table}[H]
+\centering\begingroup\fontsize{9}{11}\selectfont
+
+\begin{tabular}{>{\centering\arraybackslash}m{4.85cm}>{\centering\arraybackslash}m{4.85cm}>{\centering\arraybackslash}m{4.85cm}}
+\toprule
+\textcolor[HTML]{075aa3}{\textbf{Research}} & \textcolor[HTML]{075aa3}{\textbf{Computational}} & \textcolor[HTML]{075aa3}{\textbf{Laboratory}}\\
+\midrule
+\textcolor[HTML]{7f7f7f}{Machine learning -- Data visualization\newline Gut microbiome -- Metagenomics\newline Amplicon sequencing -- Statistical analysis -- Network analysis\newline Reproducible research} & \textcolor[HTML]{7f7f7f}{R -- R Markdown -- Quarto\newline Git/GitHub -- Snakemake\newline Conda/mamba -- Bash\newline Slurm -- Perl -- Python} & \textcolor[HTML]{7f7f7f}{DNA extraction -- Library Preparation -- Cell Culture -- Cloning -- Gel electrophoresis -- Western blot -- PCR}\\
+\bottomrule
+\end{tabular}
+\endgroup{}
+\end{table}
+
+\hypertarget{education}{%
+\section{\texorpdfstring{\faUniversity Education}{Education}}\label{education}}
+
+\begin{cventries}
+    \cventry{Deptartment of Microbiology}{PhD Molecular and Cellular Biology}{Oregon State University}{2014-2020}{\begin{cvitems}
+\item Advisor: Thomas Sharpton
+\end{cvitems}}
+    \cventry{College of Liberal Arts and Sciences}{BS Biological Sciences}{Arizona State Univeristy}{2008-2012}{\begin{cvitems}
+\item Minor: Mathematics
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{experience}{%
+\section{\texorpdfstring{\faBarChart Experience}{Experience}}\label{experience}}
+
+\begin{cventries}
+    \cventry{Schloss Lab}{Postdoctoral Research Fellow (remote)}{Univeristy of Michigan}{2020-present}{\begin{cvitems}
+\item Optimizing machine learning models to predict colorectal cancer based on gut microbiome taxonomic abundace
+\item Identifying early markers of colorectal cancer development in a large clinical cohort of individuals with genetic predisposition to cancer
+\item Developing curriculum and teaching computational skills to coding beginners in virtual workshops
+\end{cvitems}}
+    \cventry{Sharpton Lab}{Graduate Research Assistant}{Oregon State University}{2014-2020}{\begin{cvitems}
+\item Metagenomic analysis of gut microbiom samples to quantify associations with health
+\item Assembly of metagenomic data from gut microbiome samples to build integrated gene catalogues of microbiome genomic diversity
+\item Collaborate with a diverse group to develop methodology for analyzing analyzing microbiome data
+\end{cvitems}}
+    \cventry{Dr. Paul Boehmer and Dr. Jui-Cheng Hsieh}{Research/Laboratory Assistant}{University of Arizona}{2010-2013}{\begin{cvitems}
+\item Creation of HSV-1 viral mutants to quantify impact on replication
+\item Mentor new members of the lab
+\item Maintain tissue culture and order supplies
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{publications}{%
+\section{\texorpdfstring{\faFileText Publications}{Publications}}\label{publications}}
+
+\small * Indicates co-first author
+
+\small
+\begin{enumerate}
+\item \textbf{Courtney R. Armour}, Kelly L. Sovacool, William L. Close, Begüm D. Topçuoğlu, Jenna Wiens, Patrick D. Schloss. (2022). Streamlined implementation of a machine learning model to classify screen relevant neoplasia using reference-based OTU clustering. \textit{bioRxiv preprint}. doi: \href{https://doi.org/10.1101/2022.09.01.506299}{10.1101/2022.09.01.506299}
+\item \textbf{Courtney R. Armour}, Begüm D. Topçuoğlu, Andrea Garretto, Patrick D. Schloss. (2022). A goldilocks principle for the gut microbiome: taxonomic resolution matters for microbiome-based classification of colorectal cancer. mBio. doi: \href{https://doi.org/10.1128/mbio.03161-21}{10.1128/mbio.03161-21}
+\item Zena Lapp, Kelly L. Sovacool, Nick Lesniak, Dana King, Catherine Barnier, Matthew Flickinger, Jule Krüger, \textbf{Courtney R. Armour}, Maya M. Lapp, Jason Tallant, Rucheng Diao, Morgan Oneka, Sarah Tomkovich, Jacqueline Moltzau Anderson, Sarah K. Lucas, Patrick D. Schloss (2022). Developing and deploying an integrated workshop curriculum teaching computational skills for reproducible research Journal of Open Source Education. doi: \href{https://doi.org/10.21105/jose.00144}{10.21105/jose.00144}
+\item Christopher A. Gaulke, Laura M. Beaver, \textbf{Courtney R. Armour}, Ian R. Humphreys, Carrie L. Barton, Robyn L. Tanguay, Emily Ho, Thomas J. Sharpton (2020). An integrated gene catalog of the zebrafish gut microbiome reveals significant homology with mammalian microbiomes \textit{bioRxiv preprint}. doi: \href{https://doi.org/10.1101/2020.06.15.153924}{10.1101/2020.06.15.153924}
+\item Christopher A. Gaulke\textsuperscript{*}, \textbf{Courtney R. Armour}\textsuperscript{*}, Ian R. Humphreys, Laura M. Beaver, Carrie L. Barton, Lucia Carbone, Emily Ho, Robyn L. Tanguay, Yuan Jiang, Thomas Sharpton" (2020). Interspecies comparative metagenomics reveals correlated gut microbiome functional capacities among vertebrates \textit{bioRxiv preprint}. doi: \href{https://doi.org/10.1101/2020.06.15.153320}{10.1101/2020.06.15.153320}
+\item Rufa L Mendez, Cristobal Miranda, \textbf{Courtney R Armour}, Thomas J Sharpton, Jan Frederik Stevens, Jung Yeon Kwon (2020). Supplementation with sea vegetables textsuperscript{*}Palmaria mollistextsuperscript{*} and textsuperscript{*}Undaria pinnatifidatextsuperscript{*} exerts metabolic benefits in diet-induced obesity in mice Current Developments in Nutrition. doi: \href{https://doi.org/10.1093/cdn/nzaa072}{10.1093/cdn/nzaa072}
+\item Duo Jiang, \textbf{Courtney R. Armour}, Chenxiao Hu, Meng Mei, Chuan Tian, Thomas J. Sharpton, Yuan Jiang (2019). Microbiome Multi-Omics Network Analysis: Statistical Considerations, Limitations, and Opportunities Frontiers in Genetics. doi: \href{https://doi.org/10.3389/fgene.2019.00995}{10.3389/fgene.2019.00995}
+\item \textbf{Courtney R. Armour}, Stephen Nayfach, Katherine S. Pollard, Thomas J. Sharpton (2019). A metagenomic meta-analysis reveals functional signatures of health and disease in the human gut microbiome mSystems. doi: \href{https://doi.org/10.1128/mSystems.00332-18}{10.1128/mSystems.00332-18}
+\item Thomas Sharpton, Svetlana Lyalina, Julie Luong, Joey Pham, Emily M. Deal, \textbf{Courtney R. Armour}, Christopher Gaulke, Shomyseh Sanjabi, Katherine S. Pollard (2017). Development of Inflammatory Bowel Disease Is pathed to a Longitudinal Restructuring of the Gut Metagenome in Mice mSystems. doi: \href{https://doi.org/10.1128/mSystems.00036-17}{10.1128/mSystems.00036-17}
+\item Jui-Cheng Hsieh, Ryan Kuta, \textbf{Courtney R. Armour}, Paul E. Boehmer (2014). Identification of two novel functional p53 responsive elements in the herpes simplex virus-1 genome Virology. doi: \href{https://doi.org/10.1016/j.virol.2014.04.019}{10.1016/j.virol.2014.04.019}
+\end{enumerate}
+
+\hypertarget{presentations}{%
+\section{\texorpdfstring{\faComments Presentations}{Presentations}}\label{presentations}}
+
+\large \textbf{\textcolor{specialblue}{Talks}}
+
+\begin{cventries}
+    \cventry{Dissertation Defense}{Comparative metagenomic investigations link the functional capacity of the gut microbiome to vertebrate physiology}{Oregon State University}{MAR 2020}{}\vspace{-4.0mm}
+    \cventry{Microbiology and Immunology Seminar}{The functional diversity of the gut microbiome in association with host physiology}{University of Michigan}{FEB 2020}{}\vspace{-4.0mm}
+    \cventry{Center for Genome Research and Biocomputing Spring Conference}{The power of poop: diagnostic potential of the gut microbiome in human disease}{Oregon State University}{APR 2019}{}\vspace{-4.0mm}
+    \cventry{Microbiology Seminar Series}{A metagenomic meta-analysis reveals functional signatures of health and disease in the human gut microbiome}{Oregon State University}{NOV 2018}{}\vspace{-4.0mm}
+    \cventry{International Symbiosis Society.}{A metagenomic meta-analysis reveals functional signatures of health and disease in the human gut microbiome}{Oregon State University}{JUL 2018}{}\vspace{-4.0mm}
+    \cventry{Basic Medical Sciences Research Retreat}{Interaction between herpes simplex virus-1 DNA polymerase and uracil-DNA glycosylase. \textit{awarded best undergraduate presentation}}{University of Arizona}{JUN 2013}{}\vspace{-4.0mm}
+    \cventry{Basic Medical Sciences Intra-Departmental Seminar Series}{Interaction between herpes simplex virus-1 DNA polymerase and uracil- DNA glycosylase}{University of Arizona}{MAR 2013}{}\vspace{-4.0mm}
+\end{cventries}
+
+\large \textbf{\textcolor{specialblue}{Posters}}
+
+\begin{cventries}
+    \cventry{ASM Microbe}{Modeling the functional variation of the gut microbiome across vertebrates}{San Francisco CA}{JUN 2019}{}\vspace{-4.0mm}
+    \cventry{Lake Arrowhead Microbial Genomics Conference}{A metagenomic meta-analysis reveals functional signatures of health and disease in the human gut microbiome}{Lake Arrowhead CA}{SEP 2018}{}\vspace{-4.0mm}
+    \cventry{Fall Center for Genome Research and Biocomputing Conferences}{A Metagenomic Meta-Analysis Reveals Functional Signatures of Health and Disease in the Human Gut Microbiome. \textit{awarded best graduate student poster}}{Oregon State University}{OCT 2018}{}\vspace{-4.0mm}
+    \cventry{EMSL/PNNL Multi-Omics for Microbiomes Conference}{Large-scale analysis of human gut metagenomes reveals functional indicators of disease in the gut microbiome}{Pasco WA}{AUG 2017}{}\vspace{-4.0mm}
+    \cventry{OSU Microbiome Initiative Forum}{Integrating clinical data reveals functional indicators of disease in the gut microbiome}{Oregon State University}{MAY 2017}{}\vspace{-4.0mm}
+    \cventry{META Center Symposium}{Integrating clinical metagenomic data reveals microbiome signatures of dysbiosis}{University of Oregon}{AUG 2016}{}\vspace{-4.0mm}
+    \cventry{META Center Symposium}{An automated workflow for the quality control and functional analysis of host-associated metagenomes}{University of Oregon}{AUG 2015}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{fellowships}{%
+\section{\texorpdfstring{\faTrophy Fellowships}{Fellowships}}\label{fellowships}}
+
+\begin{cventries}
+    \cventry{\$25,000}{Larry W. Martin and Joyce B. O'Neill Fellowship}{Oregon State University}{2018 - 2019}{}\vspace{-4.0mm}
+    \cventry{\$6,671}{Nicholas R. Tartar Graduate Student Fellowship}{Oregon State University}{Winter 2018}{}\vspace{-4.0mm}
+    \cventry{Cost of conference registration}{Pacific Northwest National Lab Travel Grant}{EMSL/PNNL Multi-omics for Microbiomes Conference}{AUG 2017}{}\vspace{-4.0mm}
+    \cventry{\$15,000 per year - \$60,000 total}{ASM SIGHPC and Intel Data and Computational Science Fellowship}{Oregon State University}{2016 - 2020}{}\vspace{-4.0mm}
+    \cventry{\$9,000 per year - \$36,000 total}{President's Scholarship}{Arizona State University}{2008 - 2012}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{specialized-training}{%
+\section{\texorpdfstring{\faBullseye Specialized
+Training}{Specialized Training}}\label{specialized-training}}
+
+\begin{cventries}
+    \cventry{Center for Genome Research and Biocomputing}{Deep Learning for Life Scientists}{Oregon State University}{2019}{}\vspace{-4.0mm}
+    \cventry{Center for Genome Research and Biocomputing}{Specialized workshop courses}{Oregon State University}{2014 - 2019}{\begin{cvitems}
+\item RNAseq I and II
+\item Computing in Life Sciences - Perl
+\item Python I and II
+\item Command-line Data Analysis
+\item Introduction to Unix and Linux
+\end{cvitems}}
+    \cventry{Department of Biostatistics}{Certificate in Applied Biostatistics}{University of Washington}{2014}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{teaching-and-mentorship}{%
+\section{\texorpdfstring{\faBook Teaching and
+Mentorship}{Teaching and Mentorship}}\label{teaching-and-mentorship}}
+
+\large \textbf{\textcolor{specialblue}{Teaching}}
+
+\begin{cventries}
+    \cventry{Department of Statistics}{Teaching Assistant (ST599) \textit{Introduction to Quantitative Genomics}}{Oregon State University}{Fall 2016}{}\vspace{-4.0mm}
+    \cventry{Department of Statistics}{Teaching Assistant (BI211) \textit{Principles of Biology for Life Science Majors}}{Oregon State University}{Fall 2016}{}\vspace{-4.0mm}
+\end{cventries}
+
+\large \textbf{\textcolor{specialblue}{Mentorship}}
+
+\begin{cventries}
+    \cventry{Department of Microbiology}{Austin Hammer (\textit{PhD Student})}{Oregon State University}{2019 - 2020}{}\vspace{-4.0mm}
+    \cventry{Department of Microbiology}{Ian Humphreys (\textit{Accelerated Masters Student})}{Oregon State University}{2017 - 2019}{}\vspace{-4.0mm}
+    \cventry{Department of Basic Medical Sciences}{Ryan Kuta (\textit{Undergraduate Student})}{University of Arizona}{2012 - 2013}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{references}{%
+\section{\texorpdfstring{\faGroup References}{References}}\label{references}}
+
+\begin{cventries}
+    \cventry{pschloss@umich.edu}{Patrick Schloss - \textit{Postdoctoral Advisor}}{University of Michigan}{Professor}{}\vspace{-4.0mm}
+    \cventry{thomas.sharpton@oregonstate.edu}{Thomas Sharpton - \textit{Graduate Advisor}}{Oregon State University}{Associate Professor}{}\vspace{-4.0mm}
+    \cventry{katherine.pollard@gladstone.ucsf.edu}{Katie Pollard - \textit{Collaborator and Mentor}}{University of California San Francisco}{Professor}{}\vspace{-4.0mm}
+\end{cventries}
+
+
+
+\end{document}
