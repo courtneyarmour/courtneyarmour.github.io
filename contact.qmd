@@ -21,10 +21,6 @@ format: html
             <th scope="col"><span style="font-size: 30px; color: black;"><i class="fa-regular fa-envelope"></i></span></th>
             <th scope="col">armourc[at]umich[dot]edu</th>
         </tr>
-        <tr onclick="document.location='https://twitter.com/CourtneyRArmour'" style="cursor:pointer">
-            <th scope="col"><span style="font-size: 30px; color: black;"><i class="fa-brands fa-twitter"></i></span></i></th>
-            <th scope="col">@CourtneyRArmour</th>
-        </tr>
         <tr onclick="document.location='https://github.com/courtneyarmour'" style="cursor:pointer">
             <th scope="col"><span style="font-size: 30px; color: black;"><i class="fa-brands fa-github"></i></i></span></th>
             <th scope="col">courtneyarmour</th>

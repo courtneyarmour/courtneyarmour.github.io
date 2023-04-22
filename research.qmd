@@ -1,0 +1,64 @@
+---
+title: "Research Projects"
+format: 
+    html:
+        page-layout: full
+        toc: false
+---
+
+
+
+
+### Identifying early stage indicators of colorectal cancer in the gut microbiome
+
+:::: {.columns}
+
+::: {.column width="65%"}
+Description of project
+:::
+
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="30%"}
+FIGURE PLACEHOLDER
+:::
+
+::::
+
+### Optimizing machine learning models to classify colorectal cancer
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](images/project_2.png)
+:::
+
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="65%"}
+Description of project
+:::
+
+::::
+
+### Project 3
+
+:::: {.columns}
+
+::: {.column width="30%"}
+FIGURE PLACEHOLDER
+:::
+
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="65%"}
+Description of project
+:::
+
+::::
