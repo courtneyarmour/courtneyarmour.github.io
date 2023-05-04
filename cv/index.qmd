@@ -107,17 +107,6 @@ listing:
       when: Year
       what: Student
       where: University
-  - id: references
-    contents: references.yml
-    type: table
-    sort-ui: false
-    filter-ui: false
-    fields: [who,position,relationship]
-    field-display-names: 
-      who: Name and Contact
-      position: Position
-      relationship: Relationship
-
 ---
 
 View a PDF version of my CV: &ensp;
@@ -175,9 +164,4 @@ View a PDF version of my CV: &ensp;
 ### Mentorship
 
 :::{#mentorship}
-:::
-
-## {{< fa people-group >}} References
-
-:::{#references}
 :::

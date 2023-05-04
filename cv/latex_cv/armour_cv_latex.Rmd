@@ -288,22 +288,4 @@ read_yaml_as_tbl(here('cv','mentorship.yml')) %>%
 
 ```
 
-\faGroup References
-============================================
 
-```{r referencesdfadsfas}
-
-read_yaml_as_tbl(here("cv","references.yml")) %>%
-  separate(who,c("person","email"),sep="<br>") %>%
-  mutate(email = gsub("\\[.*mailto:(.*)\\)","\\1",email)) %>%
-  separate(position,c("position","university"),sep="<br>") %>%
-  mutate(person = paste0(person," - \\textit{",relationship,"}")) %>%
-  detailed_entries(
-    with = person,
-    what = email,
-    where = university,
-    when = position,
-    .protect = FALSE
-  )
-
-```

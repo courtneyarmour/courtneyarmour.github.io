@@ -14,5 +14,20 @@
   },
   "cv/index.qmd": {
     "index.html": "7c7171ab"
+  },
+  "cv/armour_cv.Rmd": {
+    "armour_cv.html": "b05a7c6c"
+  },
+  "cv/latex_cv/latex_cv.Rmd": {
+    "latex_cv.html": "28a642e5"
+  },
+  "cv/latex_cv/armour_cv_latex.Rmd": {
+    "armour_cv_latex.html": "ee013ded"
+  },
+  "cv/latex_cv/test.Rmd": {
+    "test.html": "39a884c1"
+  },
+  "research.qmd": {
+    "research.html": "b2897862"
   }
 }

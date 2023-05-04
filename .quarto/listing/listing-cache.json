@@ -4,7 +4,13 @@
       "edu.yml",
       "papers.yml",
       "experience.yml",
-      "skills.yml"
+      "skills.yml",
+      "posters.yml",
+      "talks.yml",
+      "funding.yml",
+      "training.yml",
+      "teaching.yml",
+      "mentorship.yml"
     ]
   }
 }
